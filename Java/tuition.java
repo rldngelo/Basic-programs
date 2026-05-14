@@ -32,11 +32,11 @@ public class Tuition {
                     System.out.println("The tuition to pay is " + String.format("%.2f", fullPayment) + " pesos.");
                     break;
                 case 2:
-                    installmentA = tuitionFee * 1.05f; 
+                    installmentA = tuitionFee * 1.05f;
                     System.out.println("The tuition to pay is " + String.format("%.2f", installmentA) + " pesos.");
                     break;
                 case 3:
-                    installmentB = tuitionFee * 1.10f; 
+                    installmentB = tuitionFee * 1.10f;
                     System.out.println("The tuition to pay is " + String.format("%.2f", installmentB) + " pesos.");
                     break;
                 default:

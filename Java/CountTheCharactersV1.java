@@ -2,21 +2,21 @@
 
 import java.util.Scanner;
 
-public class Main {
-  public static void countCharacters (String characters){
+public class CountTheCharactersV1 {
+  public static void countCharacters(String characters) {
     int size = characters.length();
     int countLetter = 0;
     int countNumber = 0;
     int countSpecial = 0;
     int total = 0;
     char input;
-    for(int counter = 0; counter < size; counter++){
+    for (int counter = 0; counter < size; counter++) {
       input = characters.charAt(counter);
-      if(Character.isDigit(input) == true){
+      if (Character.isDigit(input) == true) {
         countNumber++;
-      } else if(Character.isLetter(input) == true){
+      } else if (Character.isLetter(input) == true) {
         countLetter++;
-      } else{
+      } else {
         countSpecial++;
       }
     }
@@ -26,12 +26,13 @@ public class Main {
     System.out.println("Special character count: " + countSpecial);
     System.out.println("Total number of characters: " + total);
   }
-  public static void main(String[] args){
+
+  public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Count the Characters v1");
     System.out.print("Enter a string: ");
     String userInput = scanner.nextLine();
-    if(userInput.equals("")){
+    if (userInput.equals("")) {
       System.out.println("No input, please input a string.");
     } else {
       countCharacters(userInput);

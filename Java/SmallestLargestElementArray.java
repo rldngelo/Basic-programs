@@ -1,7 +1,8 @@
+
 //SMALLEST AND LARGEST ELEMENT USING ARRAY
 import java.util.Scanner;
 
-public class ArrayFinal {
+public class SmallestLargestElementArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Smallest and Largest Element in an Array");
@@ -17,7 +18,7 @@ public class ArrayFinal {
                     System.out.print("Enter element " + (index + 1) + ": ");
                     if (scanner.hasNextInt() == true) {
                         myArray[index] = scanner.nextInt();
-                        if (index == size-1) {
+                        if (index == size - 1) {
                             // traverse each element then compare
                             int smallContainer = myArray[0];
                             int bigContainer = myArray[0];
@@ -28,11 +29,14 @@ public class ArrayFinal {
                                     bigContainer = myArray[counter];
                                 }
                             }
-                            System.out.println("Smallest element in array set is " + String.format("%,d", smallContainer) + ".");
-                            System.out.println("Largest element in array set is " + String.format("%,d", bigContainer) + ".");
+                            System.out.println(
+                                    "Smallest element in array set is " + String.format("%,d", smallContainer) + ".");
+                            System.out.println(
+                                    "Largest element in array set is " + String.format("%,d", bigContainer) + ".");
                         }
                     } else {
-                        System.out.print("Invalid input, please input an integer value in element " + (index + 1) + ".");
+                        System.out
+                                .print("Invalid input, please input an integer value in element " + (index + 1) + ".");
                         break;
                     }
                 }
